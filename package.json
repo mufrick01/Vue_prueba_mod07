@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "test:unit": "jest --watchAll"
   },
   "dependencies": {
     "pinia": "^2.2.6",
