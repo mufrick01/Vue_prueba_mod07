@@ -1,6 +1,6 @@
 const { default: ContadorComponent } = require('@/modules/spa/components/ContadorComponent.vue');
 const { useCounterStore } = require('@/stores/counter');
-const { mount, shallowMount } = require('@vue/test-utils');
+const { mount } = require('@vue/test-utils');
 const { setActivePinia, createPinia } = require('pinia');
 const { nextTick } = require('vue');
 
@@ -23,9 +23,6 @@ describe('<ContadorComponent/>', () => {
 
     await nextTick();
     const span = wrapper.find('span');
-
-    console.log(span.html());
-
     expect(span.text()).toContain(`Value: ${initialValue}`);
   });
 
