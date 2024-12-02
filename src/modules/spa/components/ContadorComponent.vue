@@ -8,7 +8,19 @@
 
 <script setup>
 import { useCounterStore } from '@/stores/counter';
+import { onMounted } from 'vue';
 const counterStore = useCounterStore();
+
+const props = defineProps({
+  initialValue: {
+    type: Number,
+    default: 0
+  }
+})
+
+onMounted(() => {
+  counterStore.setCounter(props.initialValue)
+})
 </script>
 
 <style scoped>
