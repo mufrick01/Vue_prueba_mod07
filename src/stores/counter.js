@@ -10,14 +10,18 @@ export const useCounterStore = defineStore('counter', () => {
     count.value--;
   };
 
-  const setCounter = (value) => {
+  const InitializeWithValue = (value) => {
     count.value = value;
+    wasInitializedWithInitialValue.value = true;
   };
+
+  const wasInitializedWithInitialValue = ref(false);
 
   return {
     count: computed(() => count.value),
     increment,
     decrement,
-    setCounter,
+    InitializeWithValue,
+    wasInitializedWithInitialValue: computed(() => wasInitializedWithInitialValue.value),
   };
 });

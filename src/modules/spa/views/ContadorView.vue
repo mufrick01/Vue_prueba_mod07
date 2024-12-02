@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <h1>Contador View</h1>
-    <ContadorComponent :initial-value="25" />
+    <ContadorComponent :initial-value="2" />
   </div>
 </template>
 
