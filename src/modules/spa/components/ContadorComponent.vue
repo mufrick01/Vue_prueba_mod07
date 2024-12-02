@@ -19,6 +19,8 @@ const props = defineProps({
 })
 
 onMounted(() => {
+
+  if (counterStore.count !== 0) return;
   counterStore.setCounter(props.initialValue)
 })
 </script>
