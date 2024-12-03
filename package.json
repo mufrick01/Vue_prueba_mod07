@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "test:unit": "jest --watchAll",
-    "test": "jest"
+    "test:unit": "jest --watchAll --verbose",
+    "test": "jest --verbose"
   },
   "dependencies": {
     "pinia": "^2.2.6",

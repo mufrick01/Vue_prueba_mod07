@@ -1,8 +1,7 @@
-const { default: ContadorComponent } = require('@/modules/spa/components/ContadorComponent.vue');
-const { useCounterStore } = require('@/stores/counter');
-const { mount } = require('@vue/test-utils');
-const { setActivePinia, createPinia } = require('pinia');
-const { nextTick } = require('vue');
+import ContadorComponent from '@/modules/spa/components/ContadorComponent.vue';
+import { mount } from '@vue/test-utils';
+import { setActivePinia, createPinia } from 'pinia';
+import { nextTick } from 'vue';
 
 describe('<ContadorComponent/>', () => {
   beforeEach(() => {
